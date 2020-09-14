@@ -7,11 +7,14 @@ use App\Oex_category;
 use App\Oex_exam_master;
 use App\Oex_students;
 use App\Oex_portal;
-use App\Oex_exam_question_master;
+use App\Oex_exam_question_master;      
+use App\Oex_result;
 use Validator;
+use Session;
 class Admin extends Controller
 {
     public function index(){
+        
     	return view('admin.dashboard');
     }
     public function exam_category(){
@@ -120,12 +123,12 @@ class Admin extends Controller
         $data['students'] = Oex_students::select(['oex_students.*','oex_exam_masters.title as ex_name','oex_exam_masters.exam_date as ex_date'])
         ->join('oex_exam_masters','oex_students.exam','=','oex_exam_masters.id')
         ->orderBy('id','desc')->get()->toArray();
+        $data['result'] = Oex_result::get()->toArray();
         return view('admin.students',$data);
     }
     public function add_student(Request $request){
         $validator = Validator::make($request->all(),['name'=>'required','email'=>'required','no'=>'required','exam'=>'required','pwd'=>'required']);
         if($validator->passes()){
-                
 
                 $student = new Oex_students();
                 $student->name = $request->name;
@@ -278,6 +281,10 @@ class Admin extends Controller
         $update_question->options = json_encode(array('option1'=>$request->option1,'option2'=>$request->option2,'option3'=>$request->option3,'option4'=>$request->option4));
         $update_question->update();
         echo json_encode(array('status'=>'true','message'=>'Question Updated successdfully.','reload'=>url('admin/add_question/'.$update_question->exam_id)));
+    }
+    public function logout(Request $request){
+        $request->session()->forget('admin_id');
+        return redirect(url('/login'));
     }
 
 }

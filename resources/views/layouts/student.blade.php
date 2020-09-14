@@ -6,7 +6,7 @@
         <title> @yield('title')</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="{{url('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        
         <!-- font Awesome -->
         <link href="{{url('public/assets/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
@@ -20,9 +20,13 @@
         <!-- Daterange picker -->
         <link href="{{url('public/assets/css/daterangepicker/daterangepicker-bs3.css')}}" rel="stylesheet" type="text/css" />
         <!-- bootstrap wysihtml5 - text editor -->
-        <link href="{{url('public/assets/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}" rel="stylesheet" type="text/css" />
+        
         <!-- Theme style -->
         <link href="{{url('public/assets/css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -319,10 +323,7 @@
           
         </div>
 
-        <script src="{{url('public/assets/js/jquery-3.3.1.min.js')}}" type="text/javascript"></script>
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
-        <!-- jQuery UI 1.10.3 -->
- <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="{{url('public/assets/js/jquery-ui-1.10.3.min.js')}}" type="text/javascript"></script>
         <!-- Bootstrap -->
         <script src="{{url('public/assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -349,7 +350,8 @@
         <script src="{{url('public/assets/js/AdminLTE/app.js')}}" type="text/javascript"></script>
         
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{url('public/assets/js/AdminLTE/dashboard.js')}}" type="text/javascript"></script>     
+        <script src="{{url('public/assets/js/AdminLTE/dashboard.js')}}" type="text/javascript"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
         <script src="{{url('public/assets/js/custom.js')}}" type="text/javascript"></script>     
 
     </body>

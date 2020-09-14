@@ -1,6 +1,10 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{url('public/assets/css/bootstrap.min.css')}}">
+</head>
+<body>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -74,4 +78,6 @@
         </div>
     </div>
 </div>
-@endsection
+<script type="text/javascript" src="{{url('public/assets/css/bootstrap.min.css')}}"></script>
+</body>
+</html>

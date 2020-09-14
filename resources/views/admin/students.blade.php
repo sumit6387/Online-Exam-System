@@ -32,7 +32,15 @@
                             <td>{{ $student['dob'] }}</td>
                             <td>{{ $student['ex_name'] }}</td>
                             <td>{{ $student['ex_date'] }}</td>
-                            <td>N/A</td>
+                            <td><?php 
+                                    foreach ($result as $key => $res) {
+                                        if($student['id'] == $res['user_id']){
+                                            echo $res['yes_ans']+$res['no_ans'].'/'.$res['yes_ans'];
+                                        }else{
+                                            echo 'N/A';
+                                        }
+                                    }
+                             ?></td>
                             <td><input type="checkbox" class="Student_status" <?php if($student['status']==1){echo 'checked';} ?> data-id="{{$student['id']}}"></td>
                             <td><a href="{{url('admin/edit_student/'.$student['id'])}}" class="btn btn-primary" style="margin:10px;">Edit</a><span><a href="{{url('admin/delete_student/'.$student['id'])}}" class="btn btn-danger">Delete</a></span></td>
                         </tr>

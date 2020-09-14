@@ -40,7 +40,17 @@
                                     ?></td>
                                     
                                     <td>N/A </td>
-                                    <td><a href="{{url('student/join_exam/'.$exam['exam'])}}" class="btn btn-info">Join Exam</td>
+                                    <td><?php
+                                        if(strtotime($exam['exam_date']) < strtotime(date('y-m-d'))){
+                                            echo 'Completed';
+                                        }else if(strtotime($exam['exam_date']) == strtotime(date('y-m-d'))){
+                                           echo 'Running';
+                                        }else{
+                                            ?>
+                                            <a href="{{url('student/join_exam/'.$exam['exam'])}}" class="btn btn-info">Join Exam</td>
+                                                <?php
+                                        }
+                                    ?>
                                 </tr>
                             @endforeach
                         </table>
