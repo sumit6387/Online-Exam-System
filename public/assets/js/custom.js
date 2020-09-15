@@ -93,13 +93,13 @@ $('.question_status').click(function(){
 
 });
  $(document).ready(function(){
-        
+        setInterval(timer, 1000);
         function timer(){
-            
-            var time = $("#timer").val();
+            var time = $("#timer").html();
             var timerVal = time.split(':');
             var minutus = timerVal[0];
             var seconds = timerVal[1];
+            console.log(timerVal)
             
             if(seconds == '00'){
                 minutus = minutus-1;

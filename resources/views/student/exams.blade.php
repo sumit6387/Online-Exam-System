@@ -33,22 +33,35 @@
                                         if(strtotime($exam['exam_date']) < strtotime(date('y-m-d'))){
                                             echo 'Completed';
                                         }else if(strtotime($exam['exam_date']) == strtotime(date('y-m-d'))){
-                                           echo 'Running';
+                                            if(!$exam_info){
+                                                    echo 'Running';
+                                                }else{
+                                                    echo 'Completed';
+                                                }
                                         }else{
                                             echo 'Pending';
                                         }
                                     ?></td>
                                     
-                                    <td>N/A </td>
+                                    <td> 
+                                            @if($exam_info)
+                                                    {{$exam_info->yes_ans}} / {{$exam_info->yes_ans+$exam_info->no_ans}}
+                                            @endif
+
+                                    </td>
                                     <td><?php
                                         if(strtotime($exam['exam_date']) < strtotime(date('y-m-d'))){
                                             echo 'Completed';
                                         }else if(strtotime($exam['exam_date']) == strtotime(date('y-m-d'))){
-                                           echo 'Running';
+                                            if(!$exam_info){
+                                           ?>
+                                           <a href="{{url('student/join_exam/'.$exam['exam'])}}" class="btn btn-info">Join Exam</td>
+                                           <?php
+                                       }else{
+                                        echo 'Completed';
+                                       }
                                         }else{
-                                            ?>
-                                            <a href="{{url('student/join_exam/'.$exam['exam'])}}" class="btn btn-info">Join Exam</td>
-                                                <?php
+                                           echo 'Pending';
                                         }
                                     ?>
                                 </tr>

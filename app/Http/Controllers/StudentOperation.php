@@ -23,6 +23,8 @@ class StudentOperation extends Controller
     	$data['exams'] = Oex_students::select('Oex_students.*','Oex_exam_masters.title as exam_name','Oex_exam_masters.exam_date as exam_date')
     	->join('Oex_exam_masters','Oex_students.exam','=','Oex_exam_masters.id')
     	->where('Oex_students.id',Session::get('id'))->get()->toArray();
+        $exam_id = $data['exams'][0]['exam'];
+        $data['exam_info'] = Oex_result::where('exam_id',$exam_id)->where('user_id',Session::get('id'))->get()->first();
     	return view('student.exams',$data);
     }
     public function join_exam($exam_id){

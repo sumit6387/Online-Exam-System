@@ -12,7 +12,9 @@
         margin-top: 10px;
     }
 
+
 </style>
+
 <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
@@ -76,4 +78,5 @@
                 </section>
                
             </aside>
+
             @endsection
