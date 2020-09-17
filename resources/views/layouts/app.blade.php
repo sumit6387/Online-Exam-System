@@ -366,7 +366,38 @@
         <script src="{{url('public/assets/js/AdminLTE/dashboard.js')}}" type="text/javascript"></script>     
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
         <script src="{{url('public/assets/js/custom.js')}}" type="text/javascript"></script> 
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script type="text/javascript">
+            var cat = <?php echo $cat; ?>;
+            var exam = <?php echo $exam; ?>;
+            var student = <?php echo $student; ?>;
+            var port = <?php echo $port; ?>;
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
 
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light1", // "light2", "dark1", "dark2"
+                animationEnabled: true, // change to true      
+                title:{
+                    text: "Chart"
+                },
+                data: [
+                {
+                type: "column",
+                dataPoints: [
+                    { label: "Category",  y: cat  },
+                    { label: "Student", y: student  },
+                    { label: "Exams", y: exam  },
+                    { label: "Portals",  y: port  }
+                ]
+            }
+        ]
+    });
+chart.render();
+
+}
+</script>
 
     </body>
 </html>

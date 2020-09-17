@@ -41,6 +41,9 @@
     margin: 20px;
   }
 } 
+body{
+  overflow: hidden;
+}
 </style>
 <aside class="right-side">
                 <section class="content-header">
@@ -90,6 +93,14 @@
                     </div>
                 </div>
             </div>
+
+                </section>
+                <section>
+                  <div class="container">
+                    <div class="row">
+                        <div id="chartContainer" style="height: 370px; width: 100%;padding-top: 30px;"></div>
+                    </div>
+                  </div>
                 </section>
             </aside>
             @endsection
