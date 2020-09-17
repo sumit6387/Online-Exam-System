@@ -10,7 +10,10 @@
   padding: 14px 80px 18px 36px;
   cursor: pointer;
 }
-
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
 
 .card h3{
   font-weight: 600;
