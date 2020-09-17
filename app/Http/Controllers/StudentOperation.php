@@ -12,8 +12,8 @@ use App\http\Middleware\StudentMiddleware;
 class StudentOperation extends Controller
 {
     public function dashboard(){
-    	
-    	return view('student.dashboard');
+    	$data['stud_info'] = Oex_students::where('id',Session::get('id'))->get()->first();
+    	return view('student.dashboard',$data);
     }
     public function logout(Request $request){
     	$request->session()->forget('id');

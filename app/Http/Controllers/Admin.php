@@ -14,8 +14,15 @@ use Session;
 class Admin extends Controller
 {
     public function index(){
-        
-    	return view('admin.dashboard');
+        $no_category = Oex_category::all();
+        $data['cat'] = count($no_category);
+        $stud = Oex_students::all();
+        $data['student'] = count($stud);
+        $exam = Oex_exam_master::all();
+        $data['exam'] = count($exam);
+        $port = Oex_portal::all();
+        $data['port'] = count($port);
+        return view('admin.dashboard',$data);
     }
     public function exam_category(){
     	$data['category'] = Oex_category::orderBy('id','desc')->get()->toArray();

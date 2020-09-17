@@ -352,7 +352,10 @@
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="{{url('public/assets/js/AdminLTE/dashboard.js')}}" type="text/javascript"></script>  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
-        <script src="{{url('public/assets/js/custom.js')}}" type="text/javascript"></script>     
+        <script src="{{url('public/assets/js/custom.js')}}" type="text/javascript"></script> 
+        <script src="{{url('public/assets/js/jquery.backstretch.min.js')}}"></script>
+        <script src="{{url('public/assets/js/custom1.js')}}"></script>
+    
 
     </body>
 </html>
