@@ -48,6 +48,37 @@ body{
   overflow: hidden;
 }
 </style>
+<script type="text/javascript">
+            var cat = <?php echo $cat; ?>;
+            var exam = <?php echo $exam; ?>;
+            var student = <?php echo $student; ?>;
+            var port = <?php echo $port; ?>;
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light1", // "light2", "dark1", "dark2"
+                animationEnabled: true, // change to true      
+                title:{
+                    text: "Chart"
+                },
+                data: [
+                {
+                type: "column",
+                dataPoints: [
+                    { label: "Category",  y: cat  },
+                    { label: "Student", y: student  },
+                    { label: "Exams", y: exam  },
+                    { label: "Portals",  y: port  }
+                ]
+            }
+        ]
+    });
+chart.render();
+
+}
+</script>
 <aside class="right-side">
                 <section class="content-header">
                     <h1>
