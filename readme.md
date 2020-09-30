@@ -1,7 +1,7 @@
 # Online Exam System
-  In this web application we have admin panel,portal panel & student dashboard.
+  <i>In this web application we have admin panel,portal panel & student dashboard.
   We have admin login system, portal login system and student login system.
-  And we have also portal signup system.
+  And we have also portal signup system.</i>
 
 # Admin-Panel
   In the admin panel we have 4 sections
