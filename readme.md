@@ -22,4 +22,4 @@
   <h4>Student Registration</h4>
   In Student Registration, we register the student to access the join exam dashboard.  
 
-  
+# Portal Dashboard
