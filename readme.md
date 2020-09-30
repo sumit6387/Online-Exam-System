@@ -13,7 +13,7 @@
   In exam category, we add the category of exam. And also update and delete the category.    
 
  <h4>Exam</h4>
-  In Exam section we add the exam and also we add the questions and update and delete the questions.
+  In Exam section, we add the exam and also we add the questions and update and delete the questions.
   Also we update the exam and delete the exam.
 
  <h4>Portal Registration</h4>
