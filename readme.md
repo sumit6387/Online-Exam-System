@@ -9,14 +9,17 @@
   2) Exam
   3) Portal Registration
   4) Student Registration.      
-               
+ <h4>Exam Category</h4>    
   In exam category, we add the category of exam. And also update and delete the category.    
 
+ <h4>Exam</h4>
   In Exam section we add the exam and also we add the questions and update and delete the questions.
   Also we update the exam and delete the exam.
 
+ <h4>Portal Registration</h4>
   In Portal Registration, we register the portal's login credentials.         
    
+  <h4>Student Registration</h4>
   In Student Registration, we register the student to access the join exam dashboard.  
 
   
