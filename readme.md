@@ -3,7 +3,7 @@
   We have admin login system, portal login system and student login system.
   And we have also portal signup system.
 
-# Admin panel
+# Admin-Panel
   In the admin panel we have 4 sections
   1) Exam Category
   2) Exam
@@ -22,4 +22,4 @@
   <h4>Student Registration</h4>
   In Student Registration, we register the student to access the join exam dashboard.  
 
-# Portal Dashboard
+# Portal-Dashboard
