@@ -4,7 +4,7 @@
   And we have also portal signup system.</i>
 
 # Admin-Panel
-  In the admin panel we have 4 sections
+  <i>In the admin panel we have 4 sections
   1) Exam Category
   2) Exam
   3) Portal Registration
@@ -20,6 +20,6 @@
   In Portal Registration, we register the portal's login credentials.         
    
   <h4>Student Registration</h4>
-  In Student Registration, we register the student to access the join exam dashboard.  
+  In Student Registration, we register the student to access the join exam dashboard.</i>  
 
 # Portal-Dashboard
