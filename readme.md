@@ -8,7 +8,7 @@
   1) Exam Category
   2) Exam
   3) Portal Registration
-  4) Student Registration.      
+  4) Student Registration      
  <h4>Exam Category</h4>    
   In exam category, we add the category of exam. And also update and delete the category.    
 
