@@ -23,3 +23,9 @@
   In Student Registration, we register the student to access the join exam dashboard.</i>  
 
 # Portal-Dashboard
+
+  <i>In portal dashboard, we update the student information and also check how many exam conduct by the portal. </i>
+# Student Dashboard
+  In Student Dashboard, we can join the exam
+  And see the result of exam after submit the exam's answer.
+  
