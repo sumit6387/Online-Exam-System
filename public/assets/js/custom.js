@@ -21,7 +21,7 @@ $(document).on('submit','.database_operation',function(){
 $('.category_status').click(function(){
 	var id = $(this).attr('data-id');
 	// alert(id);
-	$.get('http://localhost/online_exam_system/admin/category_status/'+id,function(fb){
+	$.get('http://localhost/Online-Exam-System/admin/category_status/'+id,function(fb){
 		var resp = $.parseJSON(fb);
 		if(resp.status == 'true'){
 			alert(resp.message);
@@ -35,7 +35,7 @@ $('.category_status').click(function(){
 $('.exam_status').click(function(){
 	var id = $(this).attr('data-id');
 	// alert(id);
-	$.get('http://localhost/online_exam_system/admin/exam_status/'+id,function(fb){
+	$.get('http://localhost/Online-Exam-System/admin/exam_status/'+id,function(fb){
 		var resp = $.parseJSON(fb);
 		if(resp.status == 'true'){
 			alert(resp.message);
@@ -50,7 +50,7 @@ $('.exam_status').click(function(){
 $('.Student_status').click(function(){
 	var id = $(this).attr('data-id');
 	// alert(id);
-	$.get('http://localhost/online_exam_system/admin/Student_status/'+id,function(fb){
+	$.get('http://localhost/Online-Exam-System/admin/Student_status/'+id,function(fb){
 		var resp = $.parseJSON(fb);
 		// alert(resp);
 		if(resp.status == 'true'){
@@ -66,7 +66,7 @@ $('.Student_status').click(function(){
 $('.portal_status').click(function(){
 	var id = $(this).attr('data-id');
 	// alert(id);
-	$.get('http://localhost/online_exam_system/admin/portal_status/'+id,function(fb){
+	$.get('http://localhost/Online-Exam-System/admin/portal_status/'+id,function(fb){
 		var resp = $.parseJSON(fb);
 		// alert(resp);
 		if(resp.status == 'true'){
@@ -80,7 +80,7 @@ $('.portal_status').click(function(){
 	});
 $('.question_status').click(function(){
 	var id = $(this).attr('data-id');
-	$.get('http://localhost/online_exam_system/admin/question_status/'+id,function(fb){
+	$.get('http://localhost/Online-Exam-System/admin/question_status/'+id,function(fb){
 		var resp = $.parseJSON(fb);
 		// alert(resp);
 		if(resp.status == 'true'){
@@ -93,12 +93,13 @@ $('.question_status').click(function(){
 
 });
  $(document).ready(function(){
-        setInterval(timer,1000);
+        setInterval(timer, 1000);
         function timer(){
-            var time = $('#timer').html();
+            var time = $("#timer").html();
             var timerVal = time.split(':');
             var minutus = timerVal[0];
             var seconds = timerVal[1];
+            console.log(timerVal)
             
             if(seconds == '00'){
                 minutus = minutus-1;
@@ -107,6 +108,7 @@ $('.question_status').click(function(){
                 seconds = seconds-1;
             }
             if(minutus == '00' && seconds == '00'){
+                window.location = "{{url('student/submit_question')}}";
                 alert('Time Up');
             }
             

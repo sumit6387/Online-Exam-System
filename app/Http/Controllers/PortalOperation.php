@@ -10,9 +10,7 @@ use App\Oex_students;
 class PortalOperation extends Controller
 {
     public function dashboard(){
-    	if(!Session::get('portal_session')){
-    		return redirect('portal/login');
-    	}
+    	
     	$data['portal_exams'] = Oex_exam_master::select(['oex_exam_masters.*','oex_categories.name as cat_name'])->join('oex_categories','oex_exam_masters.category','=','oex_categories.id')->orderBy('id','desc')->where('oex_exam_masters.status',1)->get()->toArray();
     	$session_data = Session::get('portal_session');
     	return view('portal.dashboard',$data);
@@ -28,7 +26,9 @@ class PortalOperation extends Controller
     		$std->name = $request->name;
     		$std->email = $request->email;
     		$std->mobile_no = $request->no;
-    		$std->password = $request->pwd;
+            if($request->pwd != ''){
+                $std->password = $request->pwd;
+            }
     		$std->exam = $request->id;
     		$std->dob = $request->dob;
     		$std->save();

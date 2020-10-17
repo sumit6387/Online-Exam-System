@@ -1,4 +1,4 @@
- @extends('layouts.app')
+ @extends('layouts.loginLinks')
 @section('title','Login')
 @section('content')
 <div class="container">
@@ -38,7 +38,12 @@
                                 @endif
                             </div>
                         </div>
-
+                        <!-- <div class="form-group">
+                            <label for="CnfPassword" class="col-md-4 control-label">Confirm Password</label>
+                            <div class="col-md-6">
+                            <input type="text" name="cnf" class="form-control">
+                            </div>
+                        </div> -->
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
