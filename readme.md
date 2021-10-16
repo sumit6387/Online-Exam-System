@@ -21,3 +21,7 @@
    
   <h4>Student Registration</h4>
   In Student Registration, we register the student to access the join exam dashboard.</i>  
+# Student Dashboard
+  <i>In Student Dashboard, we can join the exam
+  And see the result of exam after submit the exam's answer.      
+  If you submit the exam result once then you can't join the exam.</i>
