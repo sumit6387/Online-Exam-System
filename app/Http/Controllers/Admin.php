@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Oex_category;
-use App\Oex_exam_master;
-use App\Oex_students;
-use App\Oex_portal;
-use App\Oex_exam_question_master;      
-use App\Oex_result;
-use Validator;
 use Session;
+use Validator;
+use App\Oex_portal;
+use App\Oex_result;
+use App\Oex_category;
+use App\Oex_students;
+use App\Oex_exam_master;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Oex_exam_question_master;      
+
 class Admin extends Controller
 {
     public function index(){
@@ -290,7 +292,7 @@ class Admin extends Controller
         echo json_encode(array('status'=>'true','message'=>'Question Updated successdfully.','reload'=>url('admin/add_question/'.$update_question->exam_id)));
     }
     public function logout(Request $request){
-        $request->session()->forget('admin_id');
+        Auth::Logout();
         return redirect(url('/login'));
     }
 
